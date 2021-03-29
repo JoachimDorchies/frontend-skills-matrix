@@ -1,13 +1,17 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
+import questionsStore from './questions.store';
+
 Vue.use(Vuex);
 
 const state = {};
 const getters = {};
 const mutations = {};
 const actions = {};
-const stores = {};
+const stores = {
+  questionsStore,
+};
 
 const modules = Object.entries(stores).reduce((_modules, [name, store]) => {
   const modulesTmp = _modules;
